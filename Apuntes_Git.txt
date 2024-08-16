@@ -1,0 +1,35 @@
+* sistemas de Control de Versiones Locales: RCS Ya no se usa
+
+* Centrales (Se guardan loc cambios en un servidor): CVS , SUBVERSION(SVN) 
+
+* Distribuidos: Mercurial, Bazaar, Git
+
+Desventaja de Centrales: Dependo de la conexion al servidor, en la computadora solo tenemos la ultima version de un archivo ya que no tenemos repositorio local
+
+Ventajas de los Distrubuidos: Trabajan en Local y con un servidor. Pueden enviar cambios a un repositorio local dentro de mi computadora y puedo compartirlo con los demas a traves de una red
+                              Tenemos todo el historial de cambios en la computadora
+
+Herramientas nos permiten crear repositios Git: GitHub.com, GitLab.org, bitbucket.org, sourceforge.net (De mayor a menor en cuanto a uso aunque GitHub fue comprada por Microsoft y esta perdiendo fuerza, ademas nos regala una base de datos MySql por si queremos montar un proyectico opensource)
+                                                (SourceForge permite ademas crear repositorios de tipo Mercurial y SubVersion (SVN))                              
+
+Para crear un repositorio Git con GitHub hay que registrarse, hacer login, en la parte izquierda darle al boton New y empezar a rellenar la informacion.
+Si elegimos repositorio Publico cualquier persona de internet puede hacer uso del repositorio
+En privado nosotros escogemos quien puede acceder al repositorio pero debe estar registrado en GitHub
+En la parte de Inicializar repositorio con: Sleccionar Choose a License sobre todo si es un proyecto OpenSource, entre las licencia favoritas de vroman estan MIT(ISC) y Bsd 3 (Leeer sobre esto), luego darle crear repositorio
+
+Luego se configura este repositorio en el git local y se puede empezar a subir tus archivos locales al servidor (Se vera a detalle mas adelante)
+
+Configuracion -> Settings -> Developer Settings -> Peronal Acsess tokens (Por esta ruta creo mi token de acceso personal
+
+Para borrar repositorio le doy a Settings luego bajo hasta la Danger Zone y alli esta la opcion de Borrar repositorio
+
+
+/******************************************************/
+echo "# OpenBootcamp-Java" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/rafagil47/OpenBootcamp-Java.git
+git push -u origin main
+/******************************************************/
